@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="css/main.css" />
+    <title>MineSweeper</title>
+  </head>
+  <body onload="init(1)" oncontextmenu="return false;">
+    <div class="general-information">
+      <div class="timer">
+        <div class="time-title">Timer:</div>
+        <div class="time">0</div>
+      </div>
+      <div class="smiley" onclick="changeSmiley(this)">
+        😃
+      </div>
+      <div class="show-current-score">
+        <div>Score:</div>
+        <div class="current-score-points">0</div>
+      </div>
+    </div>
+    <div class="lifes">
+      <div class="life">&hearts;</div>
+      <div class="life">&hearts;</div>
+      <div class="life">&hearts;</div>
+    </div>
+    <div class="levels">
+      <button class="easy button" onclick="init(0)">EASY</button>
+      <button class="medium button" onclick="init(1)">MEDIUM</button>
+      <button class="hard button" onclick="init(2)">HARD</button>
+    </div>
+
+    <div class="title"></div>
+    <div class="main-container">
+      <div class="hints">
+        <div class="hint" onclick="hints(this)">?</div>
+        <div class="hint" onclick="hints(this)">?</div>
+        <div class="hint" onclick="hints(this)">?</div>
+      </div>
+      <table>
+        <tbody class="board"></tbody>
+      </table>
+      <div class="score-board">
+        BestScores:
+        <div>
+          EASY
+          <div class="score score-easy">100</div>
+        </div>
+        <div>
+          MEDIUM
+          <div class="score score-medium">100</div>
+        </div>
+        <div>
+          HARD
+          <div class="score score-hard">100</div>
+        </div>
+      </div>
+    </div>
+    <script src="js/game.js"></script>
+    <script src="js/uti.js"></script>
+    <script src="js/game-ending.js"></script>
+    <script src="js/reload-functions.js"></script>
+    <script src="js/local-storage.js"></script>
+  </body>
+</html>
